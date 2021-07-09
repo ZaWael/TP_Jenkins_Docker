@@ -18,7 +18,7 @@ node {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Volkswagen-type approach ;-) */
 
-        docker.image('zawael/Jenkins-docker').withRun('--rm -p 80:80 --name devops') { c ->
+        docker.image('zawael/tpjendoc').withRun('--rm -p 80:80 --name devops') { c ->
         sh 'docker ps'
         sh 'docker exec devops curl localhost:80'
         sh 'echo "Tests passed"'
